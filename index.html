@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apero After Night</title>
+    <link rel="stylesheet" href="styles.css">   
+    <style>
+        body {
+            background-color: #ffffff; /* Couleur de fond */
+            color: #ffffff; /* Couleur du texte */
+        }
+
+        .social-media {
+            position: fixed; /* Fixe l'élément par rapport à la fenêtre du navigateur */
+            bottom: 20px; /* Espace depuis le bas */
+            right: 20px; /* Espace depuis la droite */
+            display: flex; /* Affiche les icônes en ligne */
+            gap: 10px; /* Espace entre les icônes */
+        }
+
+        .social-icon {
+            width: 40px; /* Largeur des icônes */
+            height: auto; /* Garder le rapport d'aspect */
+            opacity: 0.7; /* Légèrement transparent */
+            transition: opacity 0.3s; /* Effet de transition pour le hover */
+        }
+
+        .social-icon:hover {
+            opacity: 1; /* Rendre l'icône opaque au survol */
+        }
+
+        header {
+            text-align: center; /* Centrer le contenu dans l'en-tête */
+            margin-bottom: 20px; /* Espacement sous l'en-tête */
+        }
+
+        header img {
+            max-width: 100%; /* Rendre l'image responsive */
+            height: auto; /* Garder le rapport d'aspect */
+            margin: 0 auto; /* Centrer l'image */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Remplacez le titre par une image -->
+        <img src="apero.png" alt="Apero After Night" id="logo"> <!-- Changez 'logo.png' par le nom de votre image -->
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Rechercher des produits..." />
+            <button id="search-button">Rechercher</button>
+        </div>
+        <div id="cart">
+            <button id="cart-button">Panier (<span id="cart-count">0</span>)</button>
+            <button id="login-button">Se connecter</button>
+            <a href="#" id="register-link">Créer un compte</a>
+        </div>
+    </header>
+
+    <main>
+        <div id="product-list">
+            <!-- Les sections de catégories et les produits seront générés dynamiquement ici -->
+        </div>
+    </main>
+
+    <!-- Modal pour afficher l'image agrandie -->
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <span id="image-close" class="close">&times;</span>
+            <img id="modal-image" src="" alt="Image agrandie">
+        </div>
+    </div>
+
+    <!-- Modal pour le panier -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span id="close" class="close">&times;</span>
+            <h2>Votre Panier</h2>
+            <div id="cart-items"></div>
+            <p id="total-price">Prix total: 0,00 €</p>
+            <button id="checkout">Payer</button>
+        </div>
+    </div>
+
+    <!-- Modal pour l'authentification -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span id="auth-close" class="close">&times;</span>
+            <h2 id="auth-title">Se connecter</h2>
+            <form id="auth-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Mot de passe" required>
+                <button type="submit">Valider</button>
+            </form>
+            <p id="auth-toggle">Vous n'avez pas de compte ? <a href="#" id="toggle-auth">Inscrivez-vous ici.</a></p>
+        </div>
+    </div>
+
+    <!-- Section des icônes des réseaux sociaux -->
+    <div class="social-media">
+        <a href="https://www.snapchat.com" target="_blank">
+            <img src="snapchat-icon.png" alt="Snapchat" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
