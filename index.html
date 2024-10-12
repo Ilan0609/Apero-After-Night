@@ -41,10 +41,10 @@
         }
 
         header img {
-            width: 150px; /* Ajustez cette valeur pour contrôler la taille */
-            height: auto; /* Garder le rapport d'aspect */
-            margin: 0 auto; /* Centrer l'image */
-            display: block; /* Assurer que l'image est un bloc pour le centrage */
+            width: 300px; /* Augmenté de 150px à 300px */
+            height: auto; /* Maintient le rapport d'aspect */
+            margin: 0 auto; /* Centre l'image */
+            display: block; /* Assure que l'image est un bloc pour le centrage */
         }
 
         .search-container {
@@ -227,12 +227,23 @@
         #auth-toggle a:hover {
             text-decoration: underline;
         }
+
+        /* Media Queries pour les petits écrans (optionnel) */
+        @media (max-width: 600px) {
+            header img {
+                width: 250px; /* Réduit la taille du logo sur les petits écrans */
+            }
+
+            #search-bar {
+                width: 80%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <!-- Remplacez le titre par une image -->
-        <img src="apero.png" alt="Apero After Night" id="logo"> <!-- Assurez-vous que 'logo.png' est correct et ajustez la taille via CSS -->
+        <img src="aperor.png" alt="Apero After Night" id="logo"> <!-- Assurez-vous que 'aperor.png' est correct et ajustez la taille via CSS -->
         <div class="search-container">
             <input type="text" id="search-bar" placeholder="Rechercher des produits..." />
             <button id="search-button">Rechercher</button>
@@ -286,13 +297,13 @@
     <!-- Section des icônes des réseaux sociaux -->
     <div class="social-media">
         <a href="https://www.snapchat.com" target="_blank">
-            <img src="snapchat-icon.png" alt="Snapchat" class="social-icon">
+            <img src="Snapchat-Logo.png" alt="Snapchat" class="social-icon">
         </a>
         <a href="https://www.instagram.com" target="_blank">
-            <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+            <img src="instagram_PNG10.png" alt="Instagram" class="social-icon">
         </a>
         <a href="https://www.facebook.com" target="_blank">
-            <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+            <img src="facebook-logo-1-2.png" alt="Facebook" class="social-icon">
         </a>
     </div>
 
