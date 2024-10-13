@@ -41,7 +41,7 @@
         }
 
         header img {
-            width: 350px; /* Augmenté à 350px */
+            width: 350px; /* Taille du logo */
             height: auto; /* Maintient le rapport d'aspect */
             margin: 0 auto; /* Centre l'image */
             display: block; /* Assure que l'image est un bloc pour le centrage */
@@ -97,7 +97,7 @@
             padding: 20px;
         }
 
-        /* Styles pour la liste des produits - Colonne Unique par Défaut */
+        /* Styles par défaut pour les écrans larges (PC) - Colonne Unique */
         #product-list {
             display: block; /* Affichage en bloc pour une colonne unique */
             padding: 20px 0;
@@ -260,14 +260,34 @@
             text-decoration: underline;
         }
 
-        /* Media Queries pour les petits écrans (optionnel) */
-        @media (max-width: 600px) {
-            header img {
-                width: 250px; /* Réduit la taille du logo sur les petits écrans */
+        /* Media Queries pour les écrans de 768px et moins (Tablettes et Mobiles) */
+        @media (max-width: 768px) {
+            #product-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px; /* Espace entre les produits */
+                padding: 10px 0;
             }
 
-            #search-bar {
-                width: 80%;
+            .product {
+                padding: 15px;
+            }
+        }
+
+        /* Responsive Grid Adjustments (Optionnel) */
+        @media (max-width: 480px) {
+            /* Vous pouvez ajuster les styles supplémentaires pour les très petits écrans si nécessaire */
+            .product h3 {
+                font-size: 1em;
+            }
+
+            .product p {
+                font-size: 0.9em;
+            }
+
+            .product .add-to-cart {
+                padding: 10px;
+                font-size: 0.95em;
             }
         }
 
@@ -287,40 +307,11 @@
             background-color: #0056b3; /* Bleu plus foncé au survol */
         }
 
-        /* Responsive Grid Adjustments */
-        @media (max-width: 768px) {
-            #product-list {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 20px; /* Espace entre les produits */
-                padding: 10px 0;
-            }
-        }
-
-        /* Media Queries pour les très petits écrans */
-        @media (max-width: 480px) {
-            #product-list {
-                grid-template-columns: 1fr; /* Une seule colonne sur les très petits écrans */
-                gap: 15px;
-                padding: 10px 0;
-            }
-
-            .product {
-                padding: 10px;
-            }
-
-            .product h3 {
-                font-size: 1em;
-            }
-
-            .product p {
-                font-size: 0.9em;
-            }
-
-            .product .add-to-cart {
-                padding: 10px;
-                font-size: 0.95em;
-            }
+        /* Assurer que les images dans les produits sont responsives */
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
         }
     </style>
 </head>
