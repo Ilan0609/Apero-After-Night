@@ -41,7 +41,7 @@
         }
 
         header img {
-            width: 300px; /* Augmenté de 150px à 300px */
+            width: 350px; /* Augmenté à 350px */
             height: auto; /* Maintient le rapport d'aspect */
             margin: 0 auto; /* Centre l'image */
             display: block; /* Assure que l'image est un bloc pour le centrage */
@@ -95,6 +95,38 @@
 
         main {
             padding: 20px;
+        }
+
+        /* Styles pour la liste des produits - Colonne Unique par Défaut */
+        #product-list {
+            display: block; /* Affichage en bloc pour une colonne unique */
+            padding: 20px 0;
+        }
+
+        /* Styles pour chaque produit */
+        .product {
+            background-color: #f9f9f9; /* Couleur de fond des produits */
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .product p {
+            font-size: 0.95em;
+            color: #555;
+            min-height: 60px; /* Assure une hauteur minimale pour les descriptions courtes */
+        }
+
+        .product .add-to-cart {
+            margin-top: 10px;
+            width: 100%;
         }
 
         /* Styles des modals */
@@ -238,6 +270,58 @@
                 width: 80%;
             }
         }
+
+        /* Styles pour les boutons "Ajouter au panier" */
+        .add-to-cart {
+            background-color: #007bff; /* Bleu */
+            color: #ffffff; /* Texte blanc */
+            border: none; /* Pas de bordure */
+            padding: 10px 20px; /* Espacement intérieur */
+            border-radius: 4px; /* Coins arrondis */
+            cursor: pointer; /* Curseur pointeur */
+            transition: background-color 0.3s; /* Transition douce au survol */
+            font-size: 16px; /* Taille de police */
+        }
+
+        .add-to-cart:hover {
+            background-color: #0056b3; /* Bleu plus foncé au survol */
+        }
+
+        /* Responsive Grid Adjustments */
+        @media (max-width: 768px) {
+            #product-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px; /* Espace entre les produits */
+                padding: 10px 0;
+            }
+        }
+
+        /* Media Queries pour les très petits écrans */
+        @media (max-width: 480px) {
+            #product-list {
+                grid-template-columns: 1fr; /* Une seule colonne sur les très petits écrans */
+                gap: 15px;
+                padding: 10px 0;
+            }
+
+            .product {
+                padding: 10px;
+            }
+
+            .product h3 {
+                font-size: 1em;
+            }
+
+            .product p {
+                font-size: 0.9em;
+            }
+
+            .product .add-to-cart {
+                padding: 10px;
+                font-size: 0.95em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -258,6 +342,16 @@
     <main>
         <div id="product-list">
             <!-- Les sections de catégories et les produits seront générés dynamiquement ici -->
+            <!-- Exemple de produit personnalisé -->
+            <!-- Vous pouvez ajouter vos propres produits ici ou les générer dynamiquement via JavaScript -->
+            <!-- Exemple Manuelle:
+            <div class="product">
+                <h3>Nom du Produit</h3>
+                <img src="chemin-vers-image.jpg" alt="Nom du Produit">
+                <p>Description détaillée du produit.</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+            -->
         </div>
     </main>
 
