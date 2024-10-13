@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apero After Night</title>
-    <link rel="stylesheet" href="styles.css">   
+    <!-- Supprimer ou commenter cette ligne si vous centralisez les styles dans la balise <style> -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <style>
         body {
             background-color: #ffffff; /* Couleur de fond */
@@ -111,6 +112,7 @@
             border-radius: 8px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Ajout d'un espace entre les produits */
         }
 
         .product h3 {
@@ -332,17 +334,21 @@
 
     <main>
         <div id="product-list">
-            <!-- Les sections de catégories et les produits seront générés dynamiquement ici -->
             <!-- Exemple de produit personnalisé -->
-            <!-- Vous pouvez ajouter vos propres produits ici ou les générer dynamiquement via JavaScript -->
-            <!-- Exemple Manuelle:
             <div class="product">
-                <h3>Nom du Produit</h3>
-                <img src="chemin-vers-image.jpg" alt="Nom du Produit">
-                <p>Description détaillée du produit.</p>
+                <h3>Aperitif Fruité</h3>
+                <img src="images/aperitif-fruite.jpg" alt="Aperitif Fruité">
+                <p>Un délicieux aperitif aux saveurs fruitées parfait pour vos soirées.</p>
                 <button class="add-to-cart">Ajouter au panier</button>
             </div>
-            -->
+
+            <div class="product">
+                <h3>Bière Artisanale</h3>
+                <img src="images/biere-artisanale.jpg" alt="Bière Artisanale">
+                <p>Bière artisanale brassée localement avec des ingrédients de qualité.</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+            <!-- Ajoutez d'autres produits de la même manière -->
         </div>
     </main>
 
@@ -395,4 +401,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
