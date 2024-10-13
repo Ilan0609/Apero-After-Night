@@ -74,7 +74,7 @@
         }
 
         #cart {
-            margin-top: 20px; /* Espacement au-dessus des boutons du panier et de l'authentification */
+            margin-top: 20px; 
         }
 
         #cart button, #cart a {
@@ -97,15 +97,14 @@
             padding: 20px;
         }
 
-        /* Styles par défaut pour les écrans larges (PC) - Colonne Unique */
+        
         #product-list {
-            display: block; /* Affichage en bloc pour une colonne unique */
+            display: block; 
             padding: 20px 0;
         }
 
-        /* Styles pour chaque produit */
         .product {
-            background-color: #f9f9f9; /* Couleur de fond des produits */
+            background-color: #f9f9f9; 
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -121,7 +120,7 @@
         .product p {
             font-size: 0.95em;
             color: #555;
-            min-height: 60px; /* Assure une hauteur minimale pour les descriptions courtes */
+            min-height: 60px; 
         }
 
         .product .add-to-cart {
@@ -260,7 +259,7 @@
             text-decoration: underline;
         }
 
-        /* Media Queries pour les écrans de 768px et moins (Tablettes et Mobiles) */
+        
         @media (max-width: 768px) {
             #product-list {
                 display: grid;
@@ -274,9 +273,9 @@
             }
         }
 
-        /* Responsive Grid Adjustments (Optionnel) */
+        
         @media (max-width: 480px) {
-            /* Vous pouvez ajuster les styles supplémentaires pour les très petits écrans si nécessaire */
+            
             .product h3 {
                 font-size: 1em;
             }
@@ -291,23 +290,22 @@
             }
         }
 
-        /* Styles pour les boutons "Ajouter au panier" */
+        
         .add-to-cart {
             background-color: #007bff; /* Bleu */
-            color: #ffffff; /* Texte blanc */
-            border: none; /* Pas de bordure */
-            padding: 10px 20px; /* Espacement intérieur */
-            border-radius: 4px; /* Coins arrondis */
-            cursor: pointer; /* Curseur pointeur */
-            transition: background-color 0.3s; /* Transition douce au survol */
-            font-size: 16px; /* Taille de police */
+            color: #ffffff; 
+            border: none; 
+            padding: 10px 20px; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+            font-size: 16px; 
         }
 
         .add-to-cart:hover {
-            background-color: #0056b3; /* Bleu plus foncé au survol */
+            background-color: #0056b3; 
         }
 
-        /* Assurer que les images dans les produits sont responsives */
         .product img {
             max-width: 100%;
             height: auto;
@@ -317,8 +315,8 @@
 </head>
 <body>
     <header>
-        <!-- Remplacez le titre par une image -->
-        <img src="aperor.png" alt="Apero After Night" id="logo"> <!-- Assurez-vous que 'aperor.png' est correct et ajustez la taille via CSS -->
+        
+        <img src="aperor.png" alt="Apero After Night" id="logo"> 
         <div class="search-container">
             <input type="text" id="search-bar" placeholder="Rechercher des produits..." />
             <button id="search-button">Rechercher</button>
@@ -346,7 +344,7 @@
         </div>
     </main>
 
-    <!-- Modal pour afficher l'image agrandie -->
+    
     <div id="image-modal" class="modal">
         <div class="modal-content">
             <span id="image-close" class="close">&times;</span>
@@ -354,7 +352,7 @@
         </div>
     </div>
 
-    <!-- Modal pour le panier -->
+    
     <div id="cart-modal" class="modal">
         <div class="modal-content">
             <span id="close" class="close">&times;</span>
@@ -365,7 +363,7 @@
         </div>
     </div>
 
-    <!-- Modal pour l'authentification -->
+    
     <div id="auth-modal" class="modal">
         <div class="modal-content">
             <span id="auth-close" class="close">&times;</span>
@@ -379,7 +377,7 @@
         </div>
     </div>
 
-    <!-- Section des icônes des réseaux sociaux -->
+    
     <div class="social-media">
         <a href="https://www.snapchat.com" target="_blank">
             <img src="Snapchat-Logo.png" alt="Snapchat" class="social-icon">
