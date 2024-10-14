@@ -7,37 +7,38 @@
     <link rel="stylesheet" href="styles.css">   
     <style>
         body {
-            background-color: #ffffff; /* Couleur de fond */
+            background-image: url('Picsart_24-10-13_17-20-59-292.jpg');
             color: #ffffff; /* Couleur du texte */
             margin: 0;
             font-family: Arial, sans-serif;
         }
 
-        .social-media {
-            position: fixed; /* Fixe l'élément par rapport à la fenêtre du navigateur */
-            bottom: 20px; /* Espace depuis le bas */
-            right: 20px; /* Espace depuis la droite */
-            display: flex; /* Affiche les icônes en ligne */
-            gap: 10px; /* Espace entre les icônes */
-            z-index: 1000; /* Assure que les icônes restent au-dessus */
+        /* Bouton de téléchargement */
+        .download-button {
+            position: fixed; /* Position fixe par rapport à la fenêtre du navigateur */
+            top: 10px; /* Espace depuis le haut */
+            left: 10px; /* Espace depuis la gauche */
+            background-color: #28a745; /* Couleur de fond (vert) */
+            color: #fff; /* Couleur du texte */
+            padding: 10px 15px; /* Espacement intérieur */
+            text-decoration: none; /* Pas de soulignement */
+            border-radius: 5px; /* Coins arrondis */
+            font-size: 16px; /* Taille de police */
+            z-index: 1001; /* Assure que le bouton reste au-dessus des autres éléments */
+            transition: background-color 0.3s, transform 0.3s; /* Transition pour le hover */
         }
 
-        .social-icon {
-            width: 40px; /* Largeur des icônes */
-            height: auto; /* Garder le rapport d'aspect */
-            opacity: 0.7; /* Légèrement transparent */
-            transition: opacity 0.3s; /* Effet de transition pour le hover */
+        .download-button:hover {
+            background-color: #218838; /* Couleur de fond au survol */
+            transform: scale(1.05); /* Légère augmentation de la taille au survol */
         }
 
-        .social-icon:hover {
-            opacity: 1; /* Rendre l'icône opaque au survol */
-        }
-
+        /* En-tête */
         header {
-            text-align: center; /* Centrer le contenu dans l'en-tête */
-            padding: 20px; /* Ajout de padding */
-            background-color: #1a2a6c; /* Couleur d'arrière-plan de l'en-tête */
-            margin-bottom: 20px; /* Espacement sous l'en-tête */
+            background-color: #1a2a6c;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
         }
 
         header img {
@@ -74,7 +75,7 @@
         }
 
         #cart {
-            margin-top: 20px; 
+            margin-top: 20px; /* Espacement au-dessus des boutons du panier et de l'authentification */
         }
 
         #cart button, #cart a {
@@ -97,14 +98,15 @@
             padding: 20px;
         }
 
-        
+        /* Styles par défaut pour les écrans larges (PC) - Colonne Unique */
         #product-list {
-            display: block; 
+            display: block; /* Affichage en bloc pour une colonne unique */
             padding: 20px 0;
         }
 
+        /* Styles pour chaque produit */
         .product {
-            background-color: #f9f9f9; 
+            background-color: #f9f9f9; /* Couleur de fond des produits */
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -120,7 +122,7 @@
         .product p {
             font-size: 0.95em;
             color: #555;
-            min-height: 60px; 
+            min-height: 60px; /* Assure une hauteur minimale pour les descriptions courtes */
         }
 
         .product .add-to-cart {
@@ -259,7 +261,7 @@
             text-decoration: underline;
         }
 
-        
+        /* Media Queries pour les écrans de 768px et moins (Tablettes et Mobiles) */
         @media (max-width: 768px) {
             #product-list {
                 display: grid;
@@ -273,9 +275,9 @@
             }
         }
 
-        
+        /* Responsive Grid Adjustments (Optionnel) */
         @media (max-width: 480px) {
-            
+            /* Vous pouvez ajuster les styles supplémentaires pour les très petits écrans si nécessaire */
             .product h3 {
                 font-size: 1em;
             }
@@ -290,16 +292,16 @@
             }
         }
 
-        
+        /* Styles pour les boutons "Ajouter au panier" */
         .add-to-cart {
             background-color: #007bff; /* Bleu */
-            color: #ffffff; 
-            border: none; 
-            padding: 10px 20px; 
-            border-radius: 4px; 
-            cursor: pointer; 
-            transition: background-color 0.3s; 
-            font-size: 16px; 
+            color: #ffffff; /* Texte blanc */
+            border: none; /* Pas de bordure */
+            padding: 10px 20px; /* Espacement intérieur */
+            border-radius: 4px; /* Coins arrondis */
+            cursor: pointer; /* Curseur pointeur */
+            transition: background-color 0.3s; /* Transition douce au survol */
+            font-size: 16px; /* Taille de police */
         }
 
         .add-to-cart:hover {
@@ -311,12 +313,34 @@
             height: auto;
             border-radius: 4px;
         }
+
+        /* Styles pour les boutons de réseaux sociaux */
+        .social-media {
+            position: fixed; /* Positionnement fixe */
+            bottom: 20px; /* Distance depuis le bas */
+            right: 20px; /* Distance depuis la droite */
+            display: flex; /* Flexbox pour aligner horizontalement */
+            gap: 10px; /* Espacement entre les icônes */
+            z-index: 1000; /* Pour être au-dessus des autres éléments */
+        }
+
+        .social-icon {
+            width: 40px; /* Largeur des icônes */
+            height: auto; /* Conserver le rapport d'aspect */
+            transition: transform 0.3s; /* Transition pour le hover */
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1); /* Légère augmentation de la taille au survol */
+        }
     </style>
 </head>
 <body>
+    <!-- Bouton de téléchargement -->
+    <a href="Carte 07-2019.pdf" download class="download-button">Télécharger la carte</a>
+
     <header>
-        
-        <img src="aperor.png" alt="Apero After Night" id="logo"> 
+        <img src="aperor.png" alt="Apero After Night" id="logo">
         <div class="search-container">
             <input type="text" id="search-bar" placeholder="Rechercher des produits..." />
             <button id="search-button">Rechercher</button>
@@ -330,21 +354,11 @@
 
     <main>
         <div id="product-list">
-            <!-- Les sections de catégories et les produits seront générés dynamiquement ici -->
-            <!-- Exemple de produit personnalisé -->
-            <!-- Vous pouvez ajouter vos propres produits ici ou les générer dynamiquement via JavaScript -->
-            <!-- Exemple Manuelle:
-            <div class="product">
-                <h3>Nom du Produit</h3>
-                <img src="chemin-vers-image.jpg" alt="Nom du Produit">
-                <p>Description détaillée du produit.</p>
-                <button class="add-to-cart">Ajouter au panier</button>
+           
             </div>
-            -->
         </div>
     </main>
 
-    
     <div id="image-modal" class="modal">
         <div class="modal-content">
             <span id="image-close" class="close">&times;</span>
@@ -352,7 +366,6 @@
         </div>
     </div>
 
-    
     <div id="cart-modal" class="modal">
         <div class="modal-content">
             <span id="close" class="close">&times;</span>
@@ -363,7 +376,6 @@
         </div>
     </div>
 
-    
     <div id="auth-modal" class="modal">
         <div class="modal-content">
             <span id="auth-close" class="close">&times;</span>
@@ -377,9 +389,8 @@
         </div>
     </div>
 
-    
     <div class="social-media">
-        <a href="https://www.snapchat.com" target="_blank">
+        <a href="https://www.snapchat.com/add/kea066?sender_web_id=0633afe3-a7d3-45e2-9522-9250b4b1b93d&device_type=desktop&is_copy_url=true" target="_blank">
             <img src="Snapchat-Logo.png" alt="Snapchat" class="social-icon">
         </a>
         <a href="https://www.instagram.com" target="_blank">
