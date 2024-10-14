@@ -35,7 +35,7 @@ const categories = [
             { name: "Poliakov", price: 3.50, image: "Poliakov.png" },
             { name: "Clan Campbell", price: 3.80, image: "clan campbell.png" },
             { name: "Jack Daniel's", price: 4.00, image: "Jack Daniel's.png" },
-            { name: "Captain Morgan", price: 3.00, image: "Captain Morgan.png" },
+            { name: "Captain Morgan", price: 3.00, image: "Captain morgan.png" },
             { name: "Pack Heineken", price: 3.00, image: "heineken.png" },
             { name: "GibsonS", price: 3.00, image: "GibsonS.png" },
         ]
@@ -52,9 +52,9 @@ const categories = [
     {
         name: "Snacks",
         products: [
-            { name: "Chips Nature", price: 1.50, image: "chips_nature.jpg" },
-            { name: "Chips Paprika", price: 1.60, image: "chips_paprika.jpg" },
-            { name: "Fruits Secs", price: 2.50, image: "fruits_secs.jpg" },
+            { name: "TUC Original", price: 1.50, image: "TUC Original.png" },
+            { name: "Fouet Catalan", price: 1.60, image: "Fouet Catalan.png" },
+            { name: "Chips Nature", price: 2.50, image: "Chips.png" },
             { name: "Noix Cajou", price: 2.00, image: "noix_cajou.jpg" },
         ]
     },
