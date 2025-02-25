@@ -354,8 +354,7 @@
 
     <main>
         <div id="product-list">
-           
-            </div>
+            <!-- Produits ici -->
         </div>
     </main>
 
@@ -401,6 +400,11 @@
         </a>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Lorsque l'utilisateur clique sur "Payer", un message d'appel apparaît
+        document.getElementById("checkout").addEventListener("click", function() {
+            alert("Pour finaliser votre commande, veuillez appeler le numéro suivant : 0123456789");
+        });
+    </script>
 </body>
 </html>
